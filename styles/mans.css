@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    cursor: url('/assets/images/kursor1.png'), auto;
+}
+
+::selection {
+    background-color: #F5BFC5;
+    color: #000;
+}
+
+a {
+    cursor: url('/assets/images/kursor2.png'), pointer;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    background-color: #f1f1f1;
+}
+
+header .logo img {
+    max-width: 150px; 
+    transition: transform 0.3s;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px; 
+    font-weight: bold; 
+    padding: 10px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #f5bfc5;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+    color: #f5bfc5;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #f5bfc5;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px; 
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e09fba;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 элемента в ряд */
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Основной стиль для изображений */
+.photo-item img {
+    width: 100%; /* Изображение растягивается на 100% ширины контейнера */
+    height: auto; /* Высота подстраивается пропорционально ширине */
+    object-fit: cover; /* Обрезает изображение, чтобы оно корректно вписалось в контейнер */
+    border-radius: 5px; /* Скругленные углы */
+}
+
+.price {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+h1{
+    color:#333;
+    text-align: center;
+}
+
+
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+    .photo-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 изображения в ряд */
+    }
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 600px) {
+    .photo-container {
+        grid-template-columns: 1fr; /* 1 изображение в ряд */
+    }
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center; /* Выравниваем элементы по центру */
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px; /* Уменьшаем логотип для мобильной версии */
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Вертикальное отображение меню */
+        align-items: center; /* Выравниваем пункты меню по центру */
+        gap: 10px; /* Отступы между пунктами */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0; /* Убираем отступы */
+        width: 100%; /* Пункты меню растягиваются на всю ширину */
+        text-align: center; /* Текст по центру */
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center; /* Центрирование текста в пунктах меню */
+        font-size: 18px; /* Увеличиваем шрифт для удобства чтения */
+    }
+
+    .login-btn {
+        padding: 10px 20px;
+        width: 100%; /* Кнопка "Войти" на всю ширину */
+        text-align: center;
+    }
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+    .photo-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 изображения в ряд */
+    }
+    .login-btn {
+        padding: 10px 20px;
+        width: 100%; /* Кнопка "Войти" на всю ширину */
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+}

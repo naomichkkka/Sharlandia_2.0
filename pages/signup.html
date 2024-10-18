@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="../styles/style_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.php">
+                <img src="/assets/images/logo.png" alt="Логотип Шары Ландия">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Частые вопросы</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="/pages/signup.html" class="login-btn">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="signup-container">
+        <div class="signup">
+            <img class="logologin" src="/assets/images/logo.png" alt="Логотип Шары Ландия">
+            <h2>Авторизация</h2>
+            <form action="signup.php" method="POST">
+                <p class="plogin">Логин или почтовый адрес</p>
+                <input name="user" type="text" placeholder="Логин" required>
+                <p class="pparol">Пароль</p>
+                <input name="password" type="password" placeholder="Пароль" required>
+                <input type="submit" value="Отправить" class="signup-btn">
+            </form>
+            <div class="footer-links">
+                <a href="#">Забыли пароль?</a>
+                <p>Еще не зарегистрированы? <a href="#">Регистрация</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

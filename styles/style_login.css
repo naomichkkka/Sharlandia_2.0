@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    cursor: url('/assets/images/kursor1.png'), auto;
+}
+
+::selection {
+    background-color: #F5BFC5;
+    color: #000;
+}
+
+a {
+    cursor: url('/assets/images/kursor2.png'), pointer;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    background-color: #f1f1f1;
+}
+
+header .logo img {
+    max-width: 150px; 
+    transition: transform 0.3s;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px; 
+    font-weight: bold; 
+    padding: 10px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #f5bfc5;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+    color: #f5bfc5;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #f5bfc5;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px; 
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e09fba;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.signup {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+}
+
+.signup h2 {
+    margin-bottom: 20px;
+    color: #f5bfc5;
+}
+
+.signup input[type="text"],
+.signup input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signup input[type="submit"] {
+    background-color: #f5bfc5;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+.signup input[type="submit"]:hover {
+    background-color: #e09fba;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #f76b8a;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-links p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.plogin{
+    text-align: left;
+}
+
+.pparol{
+    text-align: left;
+}
+
+.logologin{
+    width: 50%;
+    margin: 10px;
+}
+
+.success-message {
+    color: #d65a80; /* Зеленый цвет текста */
+    font-size: 40px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    margin-top: 20px; /* Отступ сверху */
+    text-align: center; /* Выравнивание по центру */
+    background-color: rgba(40, 167, 69, 0.1); /* Легкий зеленый фон */
+    border: 1px solid #28a745; /* Зеленая рамка */
+    padding: 10px; /* Отступ внутри элемента */
+    border-radius: 5px; /* Скругление углов */
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center; /* Выравниваем элементы по центру */
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px; /* Уменьшаем логотип для мобильной версии */
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Вертикальное отображение меню */
+        align-items: center; /* Выравниваем пункты меню по центру */
+        gap: 10px; /* Отступы между пунктами */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0; /* Убираем отступы */
+        width: 100%; /* Пункты меню растягиваются на всю ширину */
+        text-align: center; /* Текст по центру */
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center; /* Центрирование текста в пунктах меню */
+        font-size: 18px; /* Увеличиваем шрифт для удобства чтения */
+    }
+
+    .login-btn {
+        padding: 10px 20px;
+        width: 100%; /* Кнопка "Войти" на всю ширину */
+        text-align: center;
+    }
+}
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+    .photo-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 изображения в ряд */
+    }
+    .login-btn {
+        padding: 10px 20px;
+        width: 100%; /* Кнопка "Войти" на всю ширину */
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+}
