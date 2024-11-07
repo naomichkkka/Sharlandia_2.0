@@ -16,8 +16,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="/pages/about_us.php">О нас</a></li>
+                <li><a href="/pages/delivery.php">Доставка и оплата</a></li>
                 <li><a href="#">Частые вопросы</a></li>
                 <li><a href="#">Отзывы</a></li>
                 <li><a href="/pages/signup.html" class="login-btn">Войти</a></li>
@@ -108,7 +108,7 @@
             <h3>Навигация</h3>
             <ul>
                 <li><a href="/index.php">Главная</a></li>
-                <li><a href="#">О нас</a></li>
+                <li><a href="/pages/about_us.php">О нас</a></li>
                 <li><a href="#">Услуги</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>

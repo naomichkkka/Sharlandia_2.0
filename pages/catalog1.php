@@ -43,7 +43,7 @@
     foreach ($result as $row) 
     {
         echo '<div class="photo-item">
-        <a href="'.$row['page_url'].'"> <!-- Ссылка на страницу из базы данных -->
+        <a href="'.$row['page_url'].'">
             <img src="/assets/images/select_category/'.$row['picture'].'" alt="Картинка">
         </a>
         <p class="name">'.$row['name'].'</p>
