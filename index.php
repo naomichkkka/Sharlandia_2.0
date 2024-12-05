@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+
+
+if (isset($_GET['add_to_cart'])) {
+    $product_name = $_GET['add_to_cart'];
+    $product_price = $_GET['price'];
+    if (isset($_SESSION['cart'][$product_name])) {
+        $_SESSION['cart'][$product_name]['quantity']++;
+    } else {
+        $_SESSION['cart'][$product_name] = ['quantity' => 1, 'price' => $product_price];
+    }
+    header("Location: index.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -20,7 +42,17 @@
                 <li><a href="/pages/delivery.php">Доставка и оплата</a></li>
                 <li><a href="#">Частые вопросы</a></li>
                 <li><a href="#">Отзывы</a></li>
-                <li><a href="/pages/signup.html" class="login-btn">Войти</a></li>
+                <?php
+                    if (isset($_SESSION["username"])) {
+                        echo '<li><a href="auth/log_out.php">Выйти</a></li>';
+                    } else {
+                        echo '<li><a href="pages/signup.html" class="login-btn">Авторизация</a></li>';
+                    }
+
+                    if (isset($_SESSION["username"])) {
+                        echo '<li><a href="/pages/basket/cart.php">Корзина (' . array_sum(array_column($_SESSION['cart'], 'quantity')) . ')</a></li>';
+                    }
+                    ?>
             </ul>
         </nav>
     </header>
@@ -30,21 +62,14 @@
     $db_user = "root"; 
     $db_password = "111351"; 
     $db_base = 'sharlandia'; 
-    $db_table = 'pictures'; 
-    $mysqli = mysqli_connect($db_host, $db_user, $db_password, $db_base);
-
-    if ($mysqli) {
-        $query = "SELECT * FROM pictures";
-        $result = mysqli_query($mysqli, $query);
-        foreach ($result as $row) {
-            echo '<div class="banner">
-                <img src="/assets/images/'.$row['picture'].'" class="banner1img" alt="Изображение">
-            </div>';
-        }
-    } else {
-        echo "Ошибка подключения к базе данных";
-    }
+    $db_table = 'users'; 
+    $mysqli = mysqli_connect($db_host, $db_user, $db_password, $db_base);                   
     ?>
+
+    <div class="banner">
+        <img src="assets/images/banner.jpg" class="banner1img" alt="Изображение">
+    </div>
+
     <div class="menu-catalog">
         <nav>
             <ul>

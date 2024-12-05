@@ -16,8 +16,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="about_us.php">О нас</a></li>
+                <li><a href="delivery.php">Доставка и оплата</a></li>
                 <li><a href="#">Частые вопросы</a></li>
                 <li><a href="#">Отзывы</a></li>
                 <li><a href="/pages/signup.html" class="login-btn">Войти</a></li>

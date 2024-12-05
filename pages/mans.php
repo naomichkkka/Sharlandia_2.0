@@ -29,23 +29,14 @@
     <br><br>
 
     <div class="photo-container">
+        
     <?php
-    $db_host = "127.127.126.50"; 
-    $db_user = "root"; // Логин БД
-    $db_password = "111351"; // Пароль БД
-    $db_base = 'sharlandia'; // Имя БД
+    include('../korzina.php');
     $db_table = 'catalog_balloons_mans'; // Имя Таблицы БД
     $mysqli = mysqli_connect("127.127.126.50", "root", "111351", 'sharlandia');
 
     $query="SELECT * FROM catalog_balloons_mans";
     $result=mysqli_query($mysqli, $query);
-    foreach ($result as $row) 
-    {
-        echo '<div class="photo-item">
-                <img src="/assets/images/catalog_balloons_mans/'.$row['picture'].'" alt="Картинка">
-                <p class="price">'.$row['price'].' руб.</p>
-              </div>';
-    }
     ?>
     </div>
 

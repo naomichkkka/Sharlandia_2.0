@@ -25,8 +25,13 @@ body {
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .container {
@@ -51,7 +56,7 @@ header:hover {
 }
 
 header .logo img {
-    max-width: 150px; 
+    max-width: 150px;
     transition: transform 0.3s;
 }
 
@@ -62,14 +67,14 @@ header .logo img:hover {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; 
+    gap: 30px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 20px; 
-    font-weight: bold; 
+    font-size: 20px;
+    font-weight: bold;
     padding: 10px;
     position: relative;
 }
@@ -95,30 +100,12 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.login-btn {
-    background-color: #f5bfc5;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px; 
-    transition: background-color 0.3s;
-}
-
-.login-btn:hover {
-    background-color: #e09fba;
-}
-
-.banner {
-    position: relative;
-    overflow: hidden; 
-    animation: slideIn 0.5s ease-in-out;
-}
-
 @keyframes slideIn {
     from {
         transform: translateY(-20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -126,9 +113,9 @@ nav ul li a:hover::after {
 }
 
 .banner img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .menu-catalog ul {
@@ -266,11 +253,11 @@ td {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9;
 }
 
 tbody tr:hover {
-    background-color: #f5bfc5; 
+    background-color: #f5bfc5;
     color: #fff;
 }
 
@@ -282,19 +269,20 @@ td:last-child {
 /* Стили для мобилок табличка */
 @media (max-width: 768px) {
     .price-table {
-        width: 90%; 
+        width: 90%;
     }
 
-    th, td {
-        font-size: 12px; 
-        padding: 6px; 
+    th,
+    td {
+        font-size: 12px;
+        padding: 6px;
     }
 }
 
 
 .divider {
     height: 1px;
-    background-color: #f5bfc5; 
+    background-color: #f5bfc5;
     margin: 20px 0;
 }
 
@@ -333,7 +321,8 @@ td:last-child {
 .footer-links a,
 .footer-social a {
     text-decoration: none;
-    color: #f5bfc5; ;
+    color: #f5bfc5;
+    ;
 }
 
 .footer-links a:hover,
@@ -342,10 +331,11 @@ td:last-child {
 }
 
 .footer-bottom {
-    text-align: center; 
+    text-align: center;
     margin-top: 20px;
     font-size: 14px;
 }
+
 footer {
     background-color: #f8f9fa;
     padding: 20px 0;
@@ -420,21 +410,26 @@ footer {
     .footer-social h3 {
         text-align: center;
     }
-    
+
     .footer-bottom {
         font-size: 12px;
     }
 }
+
 /* Адаптация для планшетов */
 @media (max-width: 1024px) {
     .photo-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 изображения в ряд */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 изображения в ряд */
     }
+
     .login-btn {
         padding: 10px 20px;
-        width: 100%; /* Кнопка "Войти" на всю ширину */
+        width: 100%;
+        /* Кнопка "Войти" на всю ширину */
         text-align: center;
     }
+
     nav ul li a {
         display: block;
         width: 100%;
@@ -448,10 +443,10 @@ footer {
 input {
     text-align: center;
     background-color: #f5bfc5;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     border-radius: 5px;
     color: #fff;
-    font-size: 18px; 
+    font-size: 18px;
     transition: background-color 0.3s;
     border: 0px;
 }

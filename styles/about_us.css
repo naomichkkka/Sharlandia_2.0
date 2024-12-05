@@ -131,46 +131,26 @@ nav ul li a:hover::after {
     object-fit: cover; 
 }
 
-.menu-catalog ul {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 20px;
-    background-color: #fff;
-}
-
-.menu-catalog ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.menu-catalog ul li a:hover {
-    color: #f5bfc5;
-}
-
-.text-dostavka {
+.title-text {
     font-size: 24px;
     color: #333;
     text-align: center;
     padding: 20px 0;
 }
 
-.text-dostavka-little {
-    font-size: 16px;
+.main-text {
+    font-size: 18px;
     color: #666;
-    text-align: center;
     padding: 10px 0;
+    margin: 30px;
 }
 
-.text-dostavka-href {
-    display: block;
+.main-text-b {
+    font-size: 20px;
+    color: #666;
+    padding: 10px 0;
+    margin: 30px;
     text-align: center;
-    color: #f5bfc5;
-    font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -232,64 +212,6 @@ nav ul li a:hover::after {
     }
 }
 
-
-.price-table {
-    width: 70%;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0;
-}
-
-th {
-    background-color: #f5bfc5;
-    color: #fff;
-    padding: 8px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-td {
-    padding: 8px;
-    border-bottom: 1px solid #e9ecef;
-    color: #333;
-    font-size: 14px;
-    text-align: center;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9; 
-}
-
-tbody tr:hover {
-    background-color: #f5bfc5; 
-    color: #fff;
-}
-
-td:last-child {
-    font-weight: bold;
-    color: #e09fba;
-}
-
-/* Стили для мобилок табличка */
-@media (max-width: 768px) {
-    .price-table {
-        width: 90%; 
-    }
-
-    th, td {
-        font-size: 12px; 
-        padding: 6px; 
-    }
-}
 
 
 .divider {
@@ -443,19 +365,4 @@ footer {
         font-size: 18px;
     }
 
-}
-
-input {
-    text-align: center;
-    background-color: #f5bfc5;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px; 
-    transition: background-color 0.3s;
-    border: 0px;
-}
-
-input:hover {
-    background-color: #e09fba;
 }
